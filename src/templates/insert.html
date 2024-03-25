@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}
+
+Music Store | Add Album
+
+{% endblock title %}
+
+{% block main %}
+
+<form method="post" enctype="multipart/form-data" class="form-layout">
+
+    <label for="">Album Name:</label>
+    <input type="text" name="album_name" >
+    <br>
+    <label for="">Band:</label>
+    <input type="text" name="band" >
+    <label for="">Genre:</label>
+    <input type="text" name="genre" >
+    <label for="">Composer:</label>
+    <input type="text" name="composer" >
+    <label for="">Length:</label>
+    <input type="int" name="length" >
+    <br>
+    <button>Add</button>
+
+</form>
+
+{% endblock main %}

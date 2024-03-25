@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}
+
+Music Store | Album Details 
+
+{% endblock title %}
+
+{% block main %}
+
+<div class="album-details">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Songs
+                </th>
+                <th>
+                    Composer      
+                </th>
+                <th>
+                    Song Length(Minuets)
+                </th>
+                <th>
+                    Megabytes
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for song in album %}
+            <tr>
+                <td>{{song.Name}}</td> <!-- song -->
+                <td>{{song.Composer}}</td>
+                <td>{{song.length}}</td>
+                <td>{{song.megabytes}}</td>
+                
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+<div>
+    <a href="{{url_for('albums.albums')}}">Back</a>
+    <span> | </span>    
+    <a href="{{url_for('albums.purchase', id = album[0].AlbumId)}}">Purchase</a>
+</div>
+
+
+{% endblock main %}

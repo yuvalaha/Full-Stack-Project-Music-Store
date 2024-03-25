@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block title %}
+
+Music Store | Our Albums
+
+{% endblock title %}
+
+{% block main %}
+
+<div class="album">
+    <table >
+        <thead>
+            <tr>
+                <th>
+                    Album Name:
+                </th>
+                <th>
+                    Band:
+                </th>
+                <th>
+                    Genre:
+                </th>
+                <th>
+                    Composer:
+                </th>
+                <th>
+                    Length(minutes):
+                </th>
+                <th>
+                    Price:
+                </th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            {% for album in albums %}
+            <td><a href="{{url_for('albums.details', id = album.id)}}">{{ album.album_name }}</a></td>
+            <td>{{ album.band }}</td>
+            <td>{{ album.genre }}</td>
+            <td>{{ album.composer }}</td>
+            <td>{{ (album.total_length) }}</td>
+            <td>{{ (album.price) }}</td>
+
+
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+
+{% endblock main %}

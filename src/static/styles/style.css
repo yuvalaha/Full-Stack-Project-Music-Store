@@ -1,0 +1,243 @@
+/* General Styling: */
+
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #ff00cc, #00ffcc);
+}
+
+/* Layout */
+
+.layout,
+.layout>* {
+    border: 1px solid;
+}
+
+.layout {
+    display: grid;
+    box-sizing: border-box;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 10% 85% 5%;
+}
+
+header,
+footer {
+    height: 100%;
+    grid-column: span 6;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    grid-column: span 5;
+    overflow: auto;
+    padding: 20px;
+}
+
+aside {
+    padding-top: 20px;
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+
+}
+aside > a{
+    
+    padding: 80px 80px;
+}
+
+
+
+
+/* Home Page Styling */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-right: 20%;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.welcome-message h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.welcome-message p {
+    font-size: 20px;
+}
+
+.main-image img {
+    width: 100%; /* Make the image cover the entire width of its container */
+    max-height: 400px; /* Set a maximum height to avoid large images */
+    margin-bottom: 20px;
+}
+
+
+/* Album Table styling */
+.album {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.album table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.album th,
+.album td {
+    border: 1px solid #fff;
+    padding: 8px;
+}
+
+.album th {
+    font-size: large;
+    background-color: #555;
+}
+
+.album td {
+    background-color: #444;
+}
+
+.album a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.album a:hover {
+    text-decoration: underline;
+}
+
+
+/* Album Details Table styling */
+.album-details {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.album-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.album-details th,
+.album-details td {
+    border: 1px solid #fff;
+    padding: 8px;
+}
+
+.album-details th {
+    font-size: large;
+    background-color: #555;
+}
+
+.album-details td {
+    background-color: #444;
+}
+
+.album-details a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.album-details a:hover {
+    text-decoration: underline;
+}
+
+/* Form layout */
+.form-layout {
+    width: 400px;
+    margin: auto;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #888;
+    text-align: left;
+    background-color: #333;
+    color: #fff;
+}
+
+.form-layout label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.form-layout input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.form-layout button {
+    background-color: #00ffcc;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-layout button:hover {
+    background-color: #00cc99;
+}
+
+
+/* About section styling */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: wheat;
+}
+
+.about-section a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-section a:hover {
+    color: #0056b3;
+}

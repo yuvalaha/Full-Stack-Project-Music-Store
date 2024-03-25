@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}
+
+Music Store | Edit Album 
+
+{% endblock title %}
+
+{% block main %}
+
+<form method="post" enctype="multipart/form-data" class="form-layout">
+    {% for song in album %}
+        <input type="hidden" name="id" value="{{album.TrackId}}">
+        <label for="">Song:</label>
+        <input type="text" name="album.name" value="{{song.Name}}">
+        <label for="">Composer:</label>
+        <input type="text" name="composer" value="{{song.Composer}}">
+        <label for="">Song Length(minuets):</label>
+        <input type="int" name="length" value="{{song.length}}">
+        <label for="">Megabytes:</label>
+        <input type="int" name="megabytes" value="{{song.length}}">
+   
+        <hr>
+        {% endfor %}    
+    <button>Edit</button>
+
+</form>
+{% endblock main %}

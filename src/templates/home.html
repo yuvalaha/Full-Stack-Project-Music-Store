@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+
+Music Store | Home
+
+{% endblock title %}
+
+{% block main %}
+
+<div class="home-container">
+    <div class="main-image">
+        <img src="{{url_for('static', filename='images/main_image.jpg')}}" alt="Music Store">
+    </div>
+
+    <div class="welcome-message">
+        <h2>Welcome to Chinock Music Store!</h2>
+        <p>Discover a world of music with our diverse collection of albums. From classic hits to the latest releases, we have it all.</p>
+    </div>
+</div>
+
+{% endblock main %}

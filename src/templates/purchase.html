@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+
+Music Store | Purchase
+
+{% endblock title %}
+
+{% block main %}
+
+<div class="purchase-page" >
+    <h2>Album Purchase</h2>
+    <form method="post" class="form-layout">
+        <label for="album">Your Album: {{ album.album_name }}</label>
+        <label for="album">Price {{ album.price }}</label>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+
+        <label for="payment_method">Payment Method:</label>
+        <select id="payment_method" name="payment_method" required>
+            <option value="credit_card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <!-- Add more payment methods as needed -->
+        </select>
+        <br><br>
+        <button type="submit">Confirm Purchase</button>
+    </form>
+</div>
+
+{% endblock main %}
